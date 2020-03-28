@@ -4,7 +4,7 @@
     <bean class="org.mycompany.SetAggregationStrategy" id="setAggregationStrategy"/>
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
         <route id="simple-route">
-            <from id="_to1" uri="netty4-http:http:0.0.0.0:9800/SplitTest"/>
+            <from id="_to1" uri="netty4-http:http:0.0.0.0:9800/SplitConcurrent"/>
             <setHeader headerName="Content-Type" id="_setHeader1">
                 <constant>application/json</constant>
             </setHeader>
