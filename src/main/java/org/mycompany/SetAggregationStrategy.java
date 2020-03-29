@@ -13,7 +13,7 @@ public class SetAggregationStrategy implements AggregationStrategy{
    public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
 
 	   System.out.println("inside Aggregation");
-	   Set<String> set = new HashSet<String>();
+	  // Set<String> set = new HashSet<String>();
 	   
 	        if (oldExchange == null) {
 	        	     	
@@ -24,7 +24,7 @@ public class SetAggregationStrategy implements AggregationStrategy{
 	             +  newExchange.getIn().getBody(String.class);
 	        System.out.println("this is body inside Aggregation" +body);
 	        oldExchange.getIn().setBody(body);
-	        set.add(body);
+	   //     set.add(body);
 	     //   if (body.length() >= 5) {
 	      //      oldExchange.setProperty(Exchange.AGGREGATION_COMPLETE_CURRENT_GROUP, true);
 	      //  }
