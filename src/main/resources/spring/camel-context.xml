@@ -4,7 +4,7 @@
     <bean class="org.mycompany.SetAggregationStrategy" id="setAggregationStrategy"/>
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
         <route id="simple-route">
-            <from id="_to1" uri="netty4-http:http:0.0.0.0:9800/SplitConcurrent"/>
+            <from id="_to1" uri="netty4-http:http:0.0.0.0:9801/SplitConcurrent"/>
             <setHeader headerName="Content-Type" id="_setHeader1">
                 <constant>application/json</constant>
             </setHeader>
@@ -21,7 +21,7 @@
         </route>
         <route id="_route2">
             <from id="_from1" uri="direct:host2"/>
-            <to id="_to6" uri="netty4-http:http:jpos-client-3-jpos-client.ypopenshiftclustersg-603fa0c10f31856ac93884f4863c562d-0000.sng01.containers.appdomain.cloud:80/jpos/client"/>
+            <to id="_to6" uri="netty4-http:http:epfiso-git-epfiso.sg2openshift-57124d23d25ef78fd339de58d690b0f5-0000.sng01.containers.appdomain.cloud:80/customer-profile-account"/>
             <log id="_log2" message="test log from host2 ${body}"/>
         </route>
         <route id="_route3">
