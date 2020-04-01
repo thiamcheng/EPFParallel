@@ -1,4 +1,4 @@
-# Spring-Boot Camel QuickStart
+# Spring-Boot Camel QuickStart ok o
 
 This example demonstrates how you can use Apache Camel with Spring Boot.
 
